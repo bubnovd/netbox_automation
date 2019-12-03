@@ -1,0 +1,23 @@
+#
+# Managed by netbox2prom.py. DON'T EDIT THIS FILE!!!
+#
+devices:
+  {% for device in devices %}
+  - name: {{ device.devname }}
+    address: {{ device.address }}
+    user: monitoring
+    password: m0niRot1_NG
+  {% endfor %}
+
+features:
+  bgp: false
+  dhcp: false
+  dhcpv6: false
+  dhcpl: true
+  routes: false
+  pools: false
+  optics: false
+  wlansta: false
+  wlanif: false
+  monitor: true
+  identity: true
