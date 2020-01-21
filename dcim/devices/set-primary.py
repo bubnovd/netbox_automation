@@ -3,11 +3,11 @@
 
 import requests, json
 
-api_url = 'http://10.10.0.10:8080/api'
+api_url = 'http://10.10.10.10:32769/api'
 ipaddr_path = '/ipam/ip-addresses/'
 devices_path = '/dcim/devices/'
 
-headers = {'content-type': 'application/json', 'Authorization': 'Token qwrfsdfwerqwedsfwfsf'}
+headers = {'content-type': 'application/json', 'Authorization': 'Token QFS2t4353qRwsr2qwrfDGWFgvw4524'}
 
 ipaddr = requests.get(api_url+ipaddr_path, headers=headers, params={"limit": 300})
 json_ipaddr = ipaddr.json()
@@ -26,6 +26,6 @@ for result in json_devices['results']:
         if third == name_num:
             device_id = result['id']
             payload = {"id": device_id, "primary_ip": ip_result['id'], "primary_ip4": ip_result['id'], "site": site, "device_role": role, "device_type": dtype}
-            r = requests.put(api_url+devices_path+str(device_id)+"/", data=json.dumps(payload), headers=headers)
-            print(r.url, r.text)
-            #print(payload)
+            #r = requests.put(api_url+devices_path+str(device_id)+"/", data=json.dumps(payload), headers=headers)
+            #print(r.url, r.text)
+            print(payload)

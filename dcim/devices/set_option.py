@@ -3,11 +3,11 @@
 
 import requests, json
 
-api_url = 'http://10.10.0.10:8080/api'
+api_url = 'http://10.10.10.10:32769/api'
 #ipaddr_path = '/ipam/ip-addresses/'
 devices_path = '/dcim/devices/'
 
-headers = {'content-type': 'application/json', 'Authorization': 'Token qwrfsdfwerqwedsfwfsf'}
+headers = {'content-type': 'application/json', 'Authorization': 'Token QFS2t4353qRwsr2qwrfDGWFgvw4524'}
 
 devices = requests.get(api_url+devices_path, headers=headers, params={"limit": 200})
 json_devices = devices.json()

@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # 
-# Создает yml для blackbox-exporter с параметрами в лейблах: ip, device_name, device_physical_location. 
 
 from jinja2 import Template, Environment, FileSystemLoader
 import os, sys, pynetbox

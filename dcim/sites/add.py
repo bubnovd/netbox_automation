@@ -4,8 +4,8 @@ from jinja2 import Template, Environment, FileSystemLoader
 import requests
 
 site_count = 150
-url = 'http://10.10.0.10:8080:32769/api/dcim/sites/'
-headers = {'content-type': 'application/json', 'Authorization': 'Token qwrfsdfwerqwedsfwfsf'}
+url = 'http://10.10.10.10:32769/api/dcim/sites/'
+headers = {'content-type': 'application/json', 'Authorization': 'Token QFS2t4353qRwsr2qwrfDGWFgvw4524'}
 
 file_loader = FileSystemLoader('.')
 env = Environment(loader=file_loader)

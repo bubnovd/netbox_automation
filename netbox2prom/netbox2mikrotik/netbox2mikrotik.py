@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # 
-# Создает yml для mikrotik_exporter
 
 from jinja2 import Template, Environment, FileSystemLoader
 import requests, json, os, sys
